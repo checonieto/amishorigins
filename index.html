@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amish Origins | Natural Pain Relief & Wellness Products</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables for Colors */
+        :root {
+            --navy-blue: #001f3f;
+            --golden-yellow: #FFD700;
+            --white: #FFFFFF;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --dark-gray: #6c757d;
+            --text-dark: #333333;
+        }
+        
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: var(--navy-blue);
+            color: var(--white);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo i {
+            color: var(--golden-yellow);
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            color: var(--white);
+        }
+        
+        .logo-text span {
+            color: var(--golden-yellow);
+        }
+        
+        nav ul {
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+            padding: 5px 0;
+        }
+        
+        nav ul li a:hover {
+            color: var(--golden-yellow);
+        }
+        
+        .cart-icon {
+            position: relative;
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: var(--golden-yellow);
+            color: var(--navy-blue);
+            font-size: 0.7rem;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 31, 63, 0.8), rgba(0, 31, 63, 0.9)), url('amish-heritage-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 60px;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--golden-yellow);
+            color: var(--navy-blue);
+            padding: 14px 32px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            transition: all 0.3s;
+            border: 2px solid var(--golden-yellow);
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--golden-yellow);
+        }
+        
+        /* Products Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--navy-blue);
+        }
+        
+        .section-title h2 {
+            font-size: 2.2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background-color: var(--golden-yellow);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .product-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--medium-gray);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            height: 220px;
+            overflow: hidden;
+        }
+        
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-category {
+            color: var(--golden-yellow);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        
+        .product-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--navy-blue);
+        }
+        
+        .product-description {
+            color: var(--dark-gray);
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--navy-blue);
+            margin-bottom: 15px;
+        }
+        
+        .add-to-cart {
+            background-color: var(--navy-blue);
+            color: var(--white);
+            border: none;
+            padding: 12px 20px;
+            width: 100%;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .add-to-cart i {
+            margin-right: 8px;
+        }
+        
+        .add-to-cart:hover {
+            background-color: var(--golden-yellow);
+            color: var(--navy-blue);
+        }
+        
+        /* About Section */
+        .about-section {
+            background-color: var(--light-gray);
+            padding: 60px 0;
+            margin: 60px 0;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 40px;
+        }
+        
+        .about-text h3 {
+            font-size: 2rem;
+            color: var(--navy-blue);
+            margin-bottom: 20px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--navy-blue);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h4 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--golden-yellow);
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--golden-yellow);
+        }
+        
+        .newsletter-form input {
+            padding: 12px 15px;
+            width: 100%;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        
+        .newsletter-form button {
+            background-color: var(--golden-yellow);
+            color: var(--navy-blue);
+            border: none;
+            padding: 12px 20px;
+            width: 100%;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .newsletter-form button:hover {
+            background-color: var(--white);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+        }
+        
+        /* Shopping Cart Sidebar */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 380px;
+            height: 100vh;
+            background-color: var(--white);
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: right 0.4s ease;
+            padding: 25px;
+            overflow-y: auto;
+        }
+        
+        .cart-sidebar.active {
+            right: 0;
+        }
+        
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        
+        .cart-header h3 {
+            font-size: 1.5rem;
+            color: var(--navy-blue);
+        }
+        
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-gray);
+        }
+        
+        .cart-items {
+            margin-bottom: 25px;
+        }
+        
+        .cart-item {
+            display: flex;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--medium-gray);
+        }
+        
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            margin-right: 15px;
+            border-radius: 4px;
+        }
+        
+        .cart-item-details {
+            flex: 1;
+        }
+        
+        .cart-item-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .cart-item-price {
+            color: var(--navy-blue);
+            font-weight: 700;
+        }
+        
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        
+        .quantity-btn {
+            width: 28px;
+            height: 28px;
+            background-color: var(--light-gray);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .quantity-value {
+            margin: 0 10px;
+            font-weight: 600;
+        }
+        
+        .remove-item {
+            background: none;
+            border: none;
+            color: var(--dark-gray);
+            cursor: pointer;
+            margin-left: auto;
+        }
+        
+        .cart-summary {
+            border-top: 2px solid var(--medium-gray);
+            padding-top: 20px;
+        }
+        
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--navy-blue);
+        }
+        
+        .cart-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .cart-actions button {
+            padding: 14px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .checkout-btn {
+            background-color: var(--golden-yellow);
+            color: var(--navy-blue);
+            border: none;
+        }
+        
+        .continue-shopping {
+            background-color: var(--navy-blue);
+            color: var(--white);
+            border: none;
+        }
+        
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+        
+        .cart-overlay.active {
+            display: block;
+        }
+        
+        /* Popup Modal */
+        .popup-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .popup-content {
+            background-color: var(--white);
+            border-radius: 8px;
+            max-width: 500px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .popup-content h2 {
+            color: var(--navy-blue);
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+        
+        .popup-content p {
+            color: var(--dark-gray);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+        
+        .popup-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .popup-btn {
+            padding: 14px 30px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            border: 2px solid transparent;
+        }
+        
+        .popup-btn.yes {
+            background-color: var(--golden-yellow);
+            color: var(--navy-blue);
+        }
+        
+        .popup-btn.continue {
+            background-color: var(--navy-blue);
+            color: var(--white);
+        }
+        
+        .popup-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                width: 100%;
+                order: 3;
+                margin-top: 15px;
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            nav ul li {
+                margin: 0;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 12px 0;
+            }
+            
+            .hero {
+                padding: 60px 20px;
+            }
+            
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            
+            .cart-sidebar {
+                width: 100%;
+                right: -100%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .popup-buttons {
+                flex-direction: column;
+            }
+            
+            .popup-btn {
+                width: 100%;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Popup Modal for Video Version -->
+    <div id="videoPopup" class="popup-modal">
+        <div class="popup-content">
+            <h2>New Video Experience Available</h2>
+            <p>Check out our new video version of the website for an enhanced shopping experience with product demonstrations and testimonials!</p>
+            <div class="popup-buttons">
+                <button id="yesVideoBtn" class="popup-btn yes">Yes, Show Me Video Version</button>
+                <button id="continueRegularBtn" class="popup-btn continue">Continue with Regular Website</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Shopping Cart Overlay -->
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Cart</h3>
+            <button class="close-cart">&times;</button>
+        </div>
+        
+        <div class="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        
+        <div class="cart-summary">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <div class="cart-actions">
+                <button class="checkout-btn">Proceed to Checkout</button>
+                <button class="continue-shopping">Continue Shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-spa"></i>
+                <div class="logo-text">Amish <span>Origins</span></div>
+            </div>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="cart-icon">
+                        <a href="#" id="openCart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Traditional Amish Remedies for Modern Wellness</h1>
+            <p>Discover our natural pain relief formulas and skincare products, crafted with time-honored Amish traditions and the finest natural ingredients.</p>
+            <a href="#products" class="cta-button">Shop Our Products</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Natural Products</h2>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-id="1" data-name="Deep Penetrating Pain Relief Aloe 3.5oz" data-price="16.99" data-image="deep-penetrating-aloe-3.5oz.jpg">
+                    <div class="product-image">
+                        <!-- Image will be added here -->
+                        <div style="background-color: #f0f0f0; height: 100%; display: flex; align-items: center; justify-content: center; color: #aaa;">
+                            <i class="fas fa-leaf fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Pain Relief</div>
+                        <h3 class="product-title">Deep Penetrating Pain Relief Aloe 3.5oz</h3>
+                        <p class="product-description">Medicated aloe formula for deep penetrating, long-lasting pain relief. Non-greasy and fast-absorbing.</p>
+                        <div class="product-price">$16.99</div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card" data-id="2" data-name="Deep Penetrating Pain Relief Cream 7oz" data-price="28.99" data-image="pain-relief-cream-7oz.jpg">
+                    <div class="product-image">
+                        <div style="background-color: #f0f0f0; height: 100%; display: flex; align-items: center; justify-content: center; color: #aaa;">
+                            <i class="fas fa-leaf fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Pain Relief</div>
+                        <h3 class="product-title">Deep Penetrating Pain Relief Cream 7oz</h3>
+                        <p class="product-description">Greaseless formula for therapeutic, deep penetrating pain relief. Perfect for sore muscles and joints.</p>
+                        <div class="product-price">$28.99</div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card" data-id="3" data-name="Deep Penetrating Liquid Spray" data-price="14.99" data-image="liquid-spray.jpg">
+                    <div class="product-image">
+                        <div style="background-color: #f0f0f0; height: 100%; display: flex; align-items: center; justify-content: center; color: #aaa;">
+                            <i class="fas fa-spray-can fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Pain Relief</div>
+                        <h3 class="product-title">Deep Penetrating Liquid Spray</h3>
+                        <p class="product-description">Same powerful formula in a convenient spray bottle for easy application on hard-to-reach areas.</p>
+                        <div class="product-price">$14.99</div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card" data-id="4" data-name="Old Time Chickweed Salve" data-price="14.99" data-image="chickweed-salve-2oz.jpg">
+                    <div class="product-image">
+                        <div style="background-color: #f0f0f0; height: 100%; display: flex; align-items: center; justify-content: center; color: #aaa;">
+                            <i class="fas fa-seedling fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Skin Care</div>
+                        <h3 class="product-title">Old Time Chickweed Salve</h3>
+                        <p class="product-description">Traditional formula for skin disorders, irritations, and dry skin. A must for every household.</p>
+                        <div class="product-price">$14.99</div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card" data-id="5" data-name="All Natural Draw Salve" data-price="14.99" data-image="draw-salve-2oz.jpg">
+                    <div class="product-image">
+                        <div style="background-color: #f0f0f0; height: 100%; display: flex; align-items: center; justify-content: center; color: #aaa;">
+                            <i class="fas fa-hand-holding-medical fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">First Aid</div>
+                        <h3 class="product-title">All Natural Draw Salve</h3>
+                        <p class="product-description">For splinters, sores, bee stings, and skin irritations. Draws out impurities naturally.</p>
+                        <div class="product-price">$14.99</div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card" data-id="6" data-name="Lip Doc Lip Balm" data-price="2.99" data-image="lip-doc.jpg">
+                    <div class="product-image">
+                        <div style="background-color: #f0f0f0; height: 100%; display: flex; align-items: center; justify-content: center; color: #aaa;">
+                            <i class="fas fa-kiss-wink-heart fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Lip Care</div>
+                        <h3 class="product-title">Lip Doc Lip Balm</h3>
+                        <p class="product-description">Soothing formula for chapped lips with natural ingredients. Perfect for outdoor activities.</p>
+                        <div class="product-price">$2.99</div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="product-card" data-id="7" data-name="Cold Press Soap 4-Pack" data-price="23.99" data-image="soap-4pack.jpg">
+                    <div class="product-image">
+                        <div style="background-color: #f0f0f0; height: 100%; display: flex; align-items: center; justify-content: center; color: #aaa;">
+                            <i class="fas fa-soap fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Soap & Bath</div>
+                        <h3 class="product-title">Cold Press Soap 4-Pack</h3>
+                        <p class="product-description">Four varieties: French Pear, White Tea & Ginger, Oat Milk & Honey, and Tea Tree & Mint.</p>
+                        <div class="product-price">$23.99</div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="product-card" data-id="8" data-name="Gift Box Set" data-price="54.99" data-image="gift-box.jpg">
+                    <div class="product-image">
+                        <div style="background-color: #f0f0f0; height: 100%; display: flex; align-items: center; justify-content: center; color: #aaa;">
+                            <i class="fas fa-gift fa-3x"></i>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">Gift Sets</div>
+                        <h3 class="product-title">Gift Box Set</h3>
+                        <p class="product-description">Our top-selling products in one beautiful gift box. Perfect for introducing someone to Amish Origins.</p>
+                        <div class="product-price">$54.99</div>
+                        <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Amish Heritage</h3>
+                    <p>For generations, the Amish people have embraced a simple lifestyle rooted in hard work, tradition, and natural remedies. At Amish Origins, we honor these traditions by creating products that harness the healing power of nature.</p>
+                    <p>Our formulas are developed using time-tested Amish recipes, carefully selected natural ingredients, and a commitment to quality that you can feel in every application. We believe in providing effective relief without harsh chemicals.</p>
+                    <p>Every product is crafted with care, respecting the traditions that have been passed down through generations while meeting the needs of modern wellness.</p>
+                </div>
+                <div class="about-image">
+                    <!-- Image will be added here -->
+                    <div style="background-color: #e9e9e9; height: 350px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #aaa;">
+                        <i class="fas fa-history fa-5x"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Amish Origins</h4>
+                    <p>Providing natural pain relief and wellness products inspired by traditional Amish remedies. Quality you can trust, naturally.</p>
+                    <p><i class="fas fa-phone"></i> 1-888-530-7643</p>
+                    <p><i class="fas fa-envelope"></i> info@amishorigins.com</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#">Shipping Information</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Product Categories</h4>
+                    <ul>
+                        <li><a href="#">Pain Relief</a></li>
+                        <li><a href="#">Skin Care</a></li>
+                        <li><a href="#">First Aid</a></li>
+                        <li><a href="#">Soap & Bath</a></li>
+                        <li><a href="#">Gift Sets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Stay Connected</h4>
+                    <p>Subscribe to our newsletter for updates on new products and special offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <div style="margin-top: 20px;">
+                        <a href="#" style="margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-facebook"></i></a>
+                        <a href="#" style="margin-right: 15px; font-size: 1.2rem;"><i class="fab fa-instagram"></i></a>
+                        <a href="#" style="font-size: 1.2rem;"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Amish Origins. All rights reserved. These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // DOM Elements
+        const videoPopup = document.getElementById('videoPopup');
+        const yesVideoBtn = document.getElementById('yesVideoBtn');
+        const continueRegularBtn = document.getElementById('continueRegularBtn');
+        const cartSidebar = document.getElementById('cartSidebar');
+        const cartOverlay = document.getElementById('cartOverlay');
+        const openCartBtn = document.getElementById('openCart');
+        const closeCartBtn = document.querySelector('.close-cart');
+        const continueShoppingBtn = document.querySelector('.continue-shopping');
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const cartItemsContainer = document.querySelector('.cart-items');
+        const cartTotalElement = document.getElementById('cartTotal');
+        const cartCountElement = document.querySelector('.cart-count');
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('nav');
+
+        // Shopping cart state
+        let cart = [];
+        
+        // Show popup on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show popup after a short delay
+            setTimeout(() => {
+                videoPopup.style.display = 'flex';
+            }, 1000);
+            
+            // Load cart from localStorage if available
+            const savedCart = localStorage.getItem('amishOriginsCart');
+            if (savedCart) {
+                cart = JSON.parse(savedCart);
+                updateCartUI();
+            }
+        });
+
+        // Popup button event listeners
+        yesVideoBtn.addEventListener('click', function() {
+            alert('Redirecting to video version... (This would link to the video version in a real implementation)');
+            videoPopup.style.display = 'none';
+        });
+
+        continueRegularBtn.addEventListener('click', function() {
+            videoPopup.style.display = 'none';
+        });
+
+        // Cart functionality
+        openCartBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            openCart();
+        });
+
+        closeCartBtn.addEventListener('click', closeCart);
+        cartOverlay.addEventListener('click', closeCart);
+        continueShoppingBtn.addEventListener('click', closeCart);
+
+        // Mobile menu toggle
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+
+        // Add to cart functionality
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const productCard = this.closest('.product-card');
+                const productId = productCard.getAttribute('data-id');
+                const productName = productCard.getAttribute('data-name');
+                const productPrice = parseFloat(productCard.getAttribute('data-price'));
+                const productImage = productCard.getAttribute('data-image');
+                
+                addToCart(productId, productName, productPrice, productImage);
+            });
+        });
+
+        // Cart functions
+        function openCart() {
+            cartSidebar.classList.add('active');
+            cartOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCart() {
+            cartSidebar.classList.remove('active');
+            cartOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function addToCart(id, name, price, image) {
+            // Check if item already exists in cart
+            const existingItemIndex = cart.findIndex(item => item.id === id);
+            
+            if (existingItemIndex > -1) {
+                // Update quantity
+                cart[existingItemIndex].quantity += 1;
+            } else {
+                // Add new item
+                cart.push({
+                    id: id,
+                    name: name,
+                    price: price,
+                    image: image,
+                    quantity: 1
+                });
+            }
+            
+            // Update UI and localStorage
+            updateCartUI();
+            saveCartToStorage();
+            
+            // Show a quick confirmation
+            const confirmMsg = document.createElement('div');
+            confirmMsg.textContent = `${name} added to cart!`;
+            confirmMsg.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: var(--golden-yellow);
+                color: var(--navy-blue);
+                padding: 15px 20px;
+                border-radius: 4px;
+                font-weight: bold;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 1001;
+                animation: slideIn 0.3s ease;
+            `;
+            document.body.appendChild(confirmMsg);
+            
+            setTimeout(() => {
+                confirmMsg.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => {
+                    document.body.removeChild(confirmMsg);
+                }, 300);
+            }, 2000);
+        }
+
+        function updateCartUI() {
+            // Clear current cart items
+            cartItemsContainer.innerHTML = '';
+            
+            let total = 0;
+            let totalItems = 0;
+            
+            // Add each cart item to the UI
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+                totalItems += item.quantity;
+                
+                const cartItemElement = document.createElement('div');
+                cartItemElement.className = 'cart-item';
+                cartItemElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-image" onerror="this.src='data:image/svg+xml;charset=UTF-8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"80\" height=\"80\" viewBox=\"0 0 80 80\"><rect width=\"80\" height=\"80\" fill=\"%23f0f0f0\"/><text x=\"50%\" y=\"50%\" font-family=\"Arial\" font-size=\"14\" fill=\"%23aaa\" text-anchor=\"middle\" dy=\".3em\">${item.name.substring(0, 15)}</text></svg>'">
+                    <div class="cart-item-details">
+                        <div class="cart-item-title">${item.name}</div>
+                        <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+                        <div class="cart-item-quantity">
+                            <button class="quantity-btn decrease-btn" data-id="${item.id}">-</button>
+                            <span class="quantity-value">${item.quantity}</span>
+                            <button class="quantity-btn increase-btn" data-id="${item.id}">+</button>
+                            <button class="remove-item" data-id="${item.id}"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                `;
+                
+                cartItemsContainer.appendChild(cartItemElement);
+            });
+            
+            // Update total and item count
+            cartTotalElement.textContent = `$${total.toFixed(2)}`;
+            cartCountElement.textContent = totalItems;
+            
+            // Add event listeners for quantity buttons and remove buttons
+            document.querySelectorAll('.decrease-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemId = this.getAttribute('data-id');
+                    updateCartItemQuantity(itemId, -1);
+                });
+            });
+            
+            document.querySelectorAll('.increase-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemId = this.getAttribute('data-id');
+                    updateCartItemQuantity(itemId, 1);
+                });
+            });
+            
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemId = this.getAttribute('data-id');
+                    removeCartItem(itemId);
+                });
+            });
+            
+            // Show empty cart message if needed
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p style="text-align: center; color: var(--dark-gray);">Your cart is empty</p>';
+            }
+        }
+
+        function updateCartItemQuantity(itemId, change) {
+            const itemIndex = cart.findIndex(item => item.id === itemId);
+            
+            if (itemIndex > -1) {
+                cart[itemIndex].quantity += change;
+                
+                // Remove item if quantity is 0 or less
+                if (cart[itemIndex].quantity <= 0) {
+                    cart.splice(itemIndex, 1);
+                }
+                
+                // Update UI and localStorage
+                updateCartUI();
+                saveCartToStorage();
+            }
+        }
+
+        function removeCartItem(itemId) {
+            cart = cart.filter(item => item.id !== itemId);
+            
+            // Update UI and localStorage
+            updateCartUI();
+            saveCartToStorage();
+        }
+
+        function saveCartToStorage() {
+            localStorage.setItem('amishOriginsCart', JSON.stringify(cart));
+        }
+
+        // Add CSS animation for the confirmation message
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+            
+            /* Smooth scrolling for anchor links */
+            html {
+                scroll-behavior: smooth;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Form submission for newsletter
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            alert(`Thank you for subscribing with ${email}! You'll receive our newsletter soon.`);
+            this.reset();
+        });
+
+        // Checkout button functionality
+        document.querySelector('.checkout-btn').addEventListener('click', function() {
+            if (cart.length === 0) {
+                alert('Your cart is empty. Add some products before checking out.');
+                return;
+            }
+            
+            alert('In a real implementation, this would redirect to a checkout page. Total: ' + cartTotalElement.textContent);
+        });
+    </script>
+</body>
+</html>
